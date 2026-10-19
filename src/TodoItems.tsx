@@ -61,7 +61,7 @@ export const TodoItem: React.FC<Props> = ({
 
   return (
     <div data-cy="Todo" className={`todo ${todo.completed ? 'completed' : ''}`}>
-      <div className="todo__status-label">
+      <label className="todo__status-label">
         <input
           data-cy="TodoStatus"
           type="checkbox"
@@ -71,7 +71,7 @@ export const TodoItem: React.FC<Props> = ({
           onChange={() => onToggle(todo)}
           disabled={isLoading}
         />
-      </div>
+      </label>
 
       {isEditing ? (
         <form
